@@ -32,12 +32,13 @@ public class MaxHeap {
     public int delete(){
         int rmv= 0;
         if(heapArray.size()>1) {
-         rmv=    heapArray.remove(0);
+         rmv=heapArray.remove(0);
             heapArray.add(0, heapArray.get(heapArray.size()-1));
             heapArray.remove(heapArray.size()-1);
             int i=0;
             while(i<heapArray.size()/2){
-                int swapIndex= (i+1)*2 < heapArray.size() ?  heapArray.indexOf(Math.max(heapArray.get((i+1)*2-1),
+                int swapIndex= (i+1)*2 < heapArray.size() ?
+                        heapArray.indexOf(Math.max(heapArray.get((i+1)*2-1),
                                                           heapArray.get((i+1)*2) )):
                                                heapArray.indexOf(heapArray.get((i+1)*2-1));
                // System.out.println(rmv);
