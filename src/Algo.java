@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.util.Arrays;
 
-import static com.sun.deploy.perf.DeployPerfUtil.write;
 
 public class Algo {
     public static void main(String[] args) throws IOException {

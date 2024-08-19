@@ -1,6 +1,6 @@
 class Node {
     int data;
-    TwoThreeNode next;
+    Node next;
     public Node(int data ){
         this.data=data;
         this.next=null;
@@ -9,14 +9,14 @@ class Node {
 }
 
 public class LinkedList {
- TwoThreeNode head;
+ Node head;
  private  int size;
 
 
  public void reverse(){
-    TwoThreeNode curr = head;
-    TwoThreeNode prev = null;
-    TwoThreeNode next;
+    Node curr = head;
+    Node prev = null;
+    Node next;
 
     while(curr!=null){
 
@@ -32,8 +32,8 @@ public class LinkedList {
  public Boolean insert(int data){
 
 
-    TwoThreeNode temp = new TwoThreeNode(data);
-    TwoThreeNode curr = head;
+    Node temp = new Node(data);
+    Node curr = head;
     if(curr == null){
         head = temp;
         size++;
@@ -68,8 +68,8 @@ public class LinkedList {
          head =null;
       return;
      }
-     TwoThreeNode curr = head;
-     TwoThreeNode prev= null;
+     Node curr = head;
+     Node prev= null;
      while (curr.next.next!=null){
 
          curr=curr.next;
@@ -79,7 +79,7 @@ public class LinkedList {
 
  }
  public void display(){
-     TwoThreeNode curr = head;
+     Node curr = head;
  while (curr!= null){
      System.out.println(curr.data);
      curr = curr.next;
